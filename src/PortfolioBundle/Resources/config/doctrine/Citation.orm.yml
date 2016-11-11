@@ -1,0 +1,17 @@
+PortfolioBundle\Entity\Citation:
+    type: entity
+    table: null
+    repositoryClass: PortfolioBundle\Repository\CitationRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        auteur:
+            type: string
+            length: 255
+        extrait:
+            type: text
+    lifecycleCallbacks: {  }

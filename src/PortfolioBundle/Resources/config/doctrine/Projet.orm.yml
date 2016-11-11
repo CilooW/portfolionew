@@ -1,0 +1,23 @@
+PortfolioBundle\Entity\Projet:
+    type: entity
+    table: null
+    repositoryClass: PortfolioBundle\Repository\ProjetRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        titre:
+            type: string
+            length: 255
+        description:
+            type: text
+        imgpath:
+            type: string
+            length: 255
+        lien:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

@@ -1,0 +1,94 @@
+.all {
+    font-size: 1.2em;
+}
+
+.accueil {
+    background-image: url(../media/inarijinja-min.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.accueil .quote {
+    position:absolute;
+    display: block;
+    top : 400px;
+    left: 50px;
+    color: white;
+}
+
+#citation {
+    font-size: 1.7em;
+}
+
+#auteur {
+    font-size: 1.2em;
+    text-align: right;
+}
+
+h2 {
+    text-align: center;
+}
+
+
+/* section QUI JE SUIS */
+
+.quijesuis {
+    width: 70%;
+    margin:0 auto;
+}
+
+.quijesuis img {
+    width:70%
+}
+
+.desc_me {
+    font-size: 1.3em;
+
+}
+
+.keywords {
+    font-size: 1.7em;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.keyword {
+
+    border-radius: 2%;
+}
+
+.hashtag {
+    font-weight: bold;
+}
+
+/* Mes Projets */
+
+.projets {
+    background-image: url(../media/lightroad-min.jpg);
+
+    /*imgfix*/
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 100%;
+    position: relative;
+
+}
+
+.blockprojet {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.proj img {
+    height:200px;
+}
+
+/* Culture */
+
+#culture img {
+    max-width: 300px;
+}

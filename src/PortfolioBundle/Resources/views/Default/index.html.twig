@@ -1,0 +1,147 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div id="all">
+    <section class="accueil">
+
+        <div class="quote col-xs-6">
+<!-- ici une boucle for avec une phrase random à chaque hover de la souris-->
+            <p id="citation">"L’expérience est une lanterne que l’on porte sur le dos et qui n’éclaire jamais que le chemin parcouru."</p>
+            <p id ="auteur"><em>Confucius</em></p>
+        </div>
+    </section>
+
+
+
+    <section class="container quijesuis">
+        <h2>Qui je suis?</h2>
+        <hr>
+
+            <div class="col-xs-3">
+                <img src="{{ asset('media/profil.jpg') }}">
+            </div>
+            <p class="desc_me col-xs-9"> un petit padawan à la recherche de la vérité!
+            depuis petite j'ai toujours adoré les jeux de logiques, les puzzles, les problèmes,
+            les énigmes. Après un parcours chaotique pour tenter de rentrer dans le moule des assistantes
+            manager et autres joyeusetés administratives, j'ai enfin ouvert LA porte qui m'a mené vers mon
+            destin ultiiiime.... LE CODE. J'aspire pouvoir vivre du métier de développeur Web, et ce, dès que possible!</p>
+
+
+        <div class="row keywords">
+            <p class="col-xs-4 keyword"><span class="hashtag">#</span> Créative</p>
+            <p class="col-xs-4 keyword"><span class="hashtag">#</span> Spontanée</p>
+            <p class="col-xs-4 keyword"><span class="hashtag">#</span> Souriante</p>
+        </div>
+    </section>
+
+
+
+    <section class="container-fluid projets">
+        <div class="container">
+            <h2>Mes Projets</h2>
+            <hr>
+        </div>
+        <div class="container blockprojet">
+<!-- ici une boucle for pour aller chercher tous les projets avec findAll du repository projet-->
+            <div class="col-xs-12 col-sm-6 col-md-4 proj">
+                <img src="{{ asset('media/biesse.png') }}"/>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 proj">
+                <img src="{{ asset('media/biesse.png') }}"/>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 proj">
+                <img src="{{ asset('media/biesse.png') }}"/>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <section class="container quijesuis">
+        <h2>Langages et outils</h2>
+        <hr>
+        <div class =" row langages">
+
+            <h3>Mes langages</h3>
+
+            <div class="col-xs-2">
+                <img src="{{ asset('media/html.png') }}">
+            </div>
+
+            <div class="col-xs-4 col-md-2">
+                <img src="{{ asset('media/css.png') }}">
+            </div>
+
+            <div class="col-xs-4 col-md-2">
+                <img src="{{ asset('media/js.png') }}">
+            </div>
+
+            <div class="col-xs-4 col-md-2">
+                <img src="{{ asset('media/php.png') }}">
+            </div>
+
+            <div class="col-xs-4 col-md-2">
+                <img src="{{ asset('media/mysql.png') }}">
+            </div>
+
+            <div class="col-xs-4 col-md-2">
+                <img src="{{ asset('media/git.png') }}">
+            </div>
+        </div>
+
+        <br/>
+
+        <div class="row outils">
+
+            <h3>Mes outils</h3>
+
+            <div class="col-xs-4 col-md-2">
+                <img src="{{ asset('media/phpstorm.png') }}">
+            </div>
+
+            <div class="col-xs-4 col-md-2">
+                <img src="{{ asset('media/photoshop.jpg') }}">
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+    <section id="culture">
+        <h2>Culture</h2>
+        <hr>
+        <div class="container">
+
+            <div class="col-xs-4 col-md-2">
+                <img src="{{ asset('media/bordage.jpg') }}">
+            </div>
+
+            <div class="col-xs-4 col-md-2">
+                <img src="{{ asset('media/chihiro.jpg') }}">
+            </div>
+
+            <div class="col-xs-4 col-md-2">
+                <img src="{{ asset('media/zerg.jpg') }}">
+            </div>
+
+            <div class="col-xs-4 col-md-2">
+                <img src="{{ asset('media/equilibrium.jpg') }}">
+            </div>
+
+            <div class="col-xs-4 col-md-2">
+                <img src="{{ asset('media/ciloojap.jpg') }}">
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+</div>
+
+{% endblock %}
