@@ -84,3 +84,9 @@ easy_admin:
                 title: "Liste des %%entity_label%%"
                 fields:
                     - { property: 'imgpath', type: 'image', base_path: '/media/' }
+        Tag:
+            class: PortfolioBundle\Entity\Tag
+            label: 'Tags'
+            list:
+                title: "Liste des %%entity_label%%"
+                fields: ['id', 'tech']

@@ -1,0 +1,24 @@
+citation_index:
+    path:     /
+    defaults: { _controller: "PortfolioBundle:Citation:index" }
+    methods:  GET
+
+citation_show:
+    path:     /{id}/show
+    defaults: { _controller: "PortfolioBundle:Citation:show" }
+    methods:  GET
+
+citation_new:
+    path:     /new
+    defaults: { _controller: "PortfolioBundle:Citation:new" }
+    methods:  [GET, POST]
+
+citation_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "PortfolioBundle:Citation:edit" }
+    methods:  [GET, POST]
+
+citation_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "PortfolioBundle:Citation:delete" }
+    methods:  DELETE

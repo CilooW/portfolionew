@@ -1,0 +1,24 @@
+projet_index:
+    path:     /
+    defaults: { _controller: "PortfolioBundle:Projet:index" }
+    methods:  GET
+
+projet_show:
+    path:     /{id}/show
+    defaults: { _controller: "PortfolioBundle:Projet:show" }
+    methods:  GET
+
+projet_new:
+    path:     /new
+    defaults: { _controller: "PortfolioBundle:Projet:new" }
+    methods:  [GET, POST]
+
+projet_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "PortfolioBundle:Projet:edit" }
+    methods:  [GET, POST]
+
+projet_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "PortfolioBundle:Projet:delete" }
+    methods:  DELETE

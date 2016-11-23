@@ -81,4 +81,3 @@ class Citation
         return $this->extrait;
     }
 }
-

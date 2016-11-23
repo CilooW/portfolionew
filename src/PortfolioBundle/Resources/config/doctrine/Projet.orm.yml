@@ -20,4 +20,18 @@ PortfolioBundle\Entity\Projet:
         lien:
             type: string
             length: 255
+
+    manyToMany:
+        tags:
+          targetEntity: Tag
+          inversedBy: projets
+          joinTable:
+            name: projets_tags
+            joinColumns:
+              projet_title:
+                referencedColumnName: titre
+            inverseJoinColumns:
+              tag_tech:
+                referencedColumnName: tech
+
     lifecycleCallbacks: {  }

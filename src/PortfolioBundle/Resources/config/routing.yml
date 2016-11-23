@@ -1,3 +1,15 @@
+portfolio_projet:
+    resource: "@PortfolioBundle/Resources/config/routing/projet.yml"
+    prefix:   /projet
+
+portfolio_citation:
+        resource: "@PortfolioBundle/Resources/config/routing/citation.yml"
+        prefix:   /citation
+
+portfolio_tag:
+        resource: "@PortfolioBundle/Resources/config/routing/tag.yml"
+        prefix:   /tag
+
 portfolio_homepage:
     path:     /
     defaults: { _controller: PortfolioBundle:Default:index }

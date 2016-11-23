@@ -12,4 +12,9 @@ PortfolioBundle\Entity\Tag:
         tech:
             type: string
             length: 255
+
+    manyToMany:
+        projets:
+          targetEntity: Projet
+          mappedBy: tags
     lifecycleCallbacks: {  }
