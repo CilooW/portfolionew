@@ -65,3 +65,22 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+easy_admin:
+    site_name: 'Portfolio de Ciloo'
+    design:
+        brand_color: '#fc9b00'
+    entities:
+        Citation:
+            class: PortfolioBundle\Entity\Citation
+            label: 'Citations'
+            list:
+                title: "Liste des %%entity_label%%"
+                fields: ['id', 'author', 'extrait']
+        Projet:
+            class: PortfolioBundle\Entity\Projet
+            label: 'Projets'
+            list:
+                title: "Liste des %%entity_label%%"
+                fields:
+                    - { property: 'imgpath', type: 'image', base_path: '/media/' }

@@ -1,0 +1,15 @@
+PortfolioBundle\Entity\Tag:
+    type: entity
+    table: null
+    repositoryClass: PortfolioBundle\Repository\TagRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        tech:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

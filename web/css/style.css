@@ -12,17 +12,17 @@
 .accueil .quote {
     position:absolute;
     display: block;
-    top : 400px;
+    top : 500px;
     left: 50px;
     color: white;
 }
 
 #citation {
-    font-size: 1.7em;
+    font-size: 2.5em;
 }
 
 #auteur {
-    font-size: 1.2em;
+    font-size: 1.7em;
     text-align: right;
 }
 
@@ -39,7 +39,7 @@ h2 {
 }
 
 .quijesuis img {
-    width:70%
+    width:80%;
 }
 
 .desc_me {
@@ -80,11 +80,11 @@ h2 {
 
 .blockprojet {
     margin-top: 20px;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 .proj img {
-    height:200px;
+    height:235px;
 }
 
 /* Culture */
