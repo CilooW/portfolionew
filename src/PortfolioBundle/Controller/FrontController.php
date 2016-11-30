@@ -9,10 +9,27 @@
 namespace PortfolioBundle\Controller;
 
 
+
+
+use PortfolioBundle\PortfolioBundle;
+use PortfolioBundle\Repository\CitationRepository;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
 class FrontController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('PortfolioBundle:Default:index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+
+        /**
+         * @var $repo CitationRepository
+         */
+        $repo = $em->getRepository('PortfolioBundle:Citation');
+        $citation = $repo->getRandomQuote();
+
+
+        return $this->render('PortfolioBundle:Default:index.html.twig', array(
+            'citation' => $citation[0],
+        ));
     }
 }

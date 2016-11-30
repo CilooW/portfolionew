@@ -12,7 +12,7 @@
 .accueil .quote {
     position:absolute;
     display: block;
-    top : 500px;
+    top : 400px;
     left: 50px;
     color: white;
 }
@@ -85,6 +85,12 @@ h2 {
 
 .proj img {
     height:235px;
+}
+
+/*Langages et outils */
+
+.langages img {
+    width: 100px;
 }
 
 /* Culture */

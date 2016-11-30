@@ -80,4 +80,9 @@ class Citation
     {
         return $this->extrait;
     }
+
+    public function __toString()
+    {
+        return strval($this->id);
+    }
 }

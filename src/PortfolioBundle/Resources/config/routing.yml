@@ -12,4 +12,4 @@ portfolio_tag:
 
 portfolio_homepage:
     path:     /
-    defaults: { _controller: PortfolioBundle:Default:index }
+    defaults: { _controller: PortfolioBundle:Front:index }

@@ -76,17 +76,21 @@ easy_admin:
             label: 'Citations'
             list:
                 title: "Liste des %%entity_label%%"
-                fields: ['id', 'author', 'extrait']
+                fields: ['id', 'auteur', 'extrait']
         Projet:
             class: PortfolioBundle\Entity\Projet
             label: 'Projets'
             list:
                 title: "Liste des %%entity_label%%"
                 fields:
-                    - { property: 'imgpath', type: 'image', base_path: '/media/' }
+                    - 'image'
+                    - { property: 'image', type: 'image', base_path: '/media/' }
         Tag:
             class: PortfolioBundle\Entity\Tag
             label: 'Tags'
             list:
                 title: "Liste des %%entity_label%%"
                 fields: ['id', 'tech']
+            form:  # <-- 'form' is applied to both 'new' and 'edit' views
+                            fields:
+                                - 'tech'

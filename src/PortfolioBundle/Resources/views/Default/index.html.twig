@@ -6,9 +6,11 @@
         <section class="accueil">
             <div class="row">
                 <div class="quote col s6">
+
                     <!-- ici une boucle for avec une phrase random à chaque hover de la souris-->
-                    <p id="citation">"L’expérience est une lanterne que l’on porte sur le dos et qui n’éclaire jamais que le chemin parcouru."</p>
-                    <p id ="auteur"><em>Confucius</em></p>
+                    <p id="citation">"{{ citation.extrait }}"</p>
+                    <p id ="auteur"><em>{{  citation.auteur }}</em></p>
+
                 </div>
             </div>
         </section>
