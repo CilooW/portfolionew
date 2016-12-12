@@ -30,6 +30,18 @@ h2 {
     text-align: center;
 }
 
+.brand-logo{
+    margin-left: 20px;
+}
+
+.nav-wrapper li a {
+    font-size: 1.4em;
+}
+
+.nav-wrapper {
+    background-color: #1c2529;
+}
+
 
 /* section QUI JE SUIS */
 
@@ -45,6 +57,10 @@ h2 {
 .desc_me {
     font-size: 1.3em;
 
+}
+
+.fiveyears {
+    text-decoration: line-through;
 }
 
 .keywords {
@@ -76,6 +92,11 @@ h2 {
     width: 100%;
     position: relative;
 
+}
+
+.projets h2 {
+    color:white;
+    padding-top:20px;
 }
 
 .blockprojet {

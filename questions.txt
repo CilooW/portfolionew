@@ -1,0 +1,8 @@
+je veux faire une boucle pour afficher par exemple toutes mes photos dans ma partie loisirs.
+dois-je obligatoirement créer une base de donner pour les stocker puis ensuite les afficher avec une boucle for dans mon twig via un findAll, ou y a t il plus simple?
+
+idem pour les images outils/langages.
+
+eh ben, eh ben, eh ben le modal y marche pas et je sais pas pourquouaaaaaaaaa
+
+c'est quoi le moyen le plus simple pour mettre des images toutes à la même taille? leur fixer une width et une height fixe?

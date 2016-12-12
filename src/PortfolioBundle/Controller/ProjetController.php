@@ -38,6 +38,13 @@ class ProjetController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $file = $projet->getImgpath();
+            $fileName = md5(uniqid()).'.'.$file->guessExtension(); // md5 est un format de cryptage et guessExtenstion est pour mettre la meme extension qu'avant
+            $file->move(
+                $this->getParameter('upload_directory'),
+                $fileName
+            );
+            $projet->setImgpath($fileName);
             $em = $this->getDoctrine()->getManager();
             $em->persist($projet);
             $em->flush($projet);
