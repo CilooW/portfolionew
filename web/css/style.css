@@ -125,3 +125,18 @@ h2 {
 footer.page-footer {
     background-color: #1c2529;
 }
+
+.social-network {
+    font-size:2em;
+    text-align: center;
+}
+.social-network h5 {
+    margin-bottom: 20px;
+}
+.social-network i {
+    color: #a6e1ec;
+}
+
+.social-network a {
+    margin-left: 20px;
+}
