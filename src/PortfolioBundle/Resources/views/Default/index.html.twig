@@ -63,17 +63,19 @@
                     {% for projet in projets %}
 
                     <div class="col s12 m6 l4 proj">
-                        <a href="#modal1"><img src="{{ upload_directory }}/{{ projet.imgpath }}"/></a>
+                        <a class="waves-effect waves-light" href="#modal"><img src="{{ upload_directory }}/{{ projet.imgpath }}"/></a>
                     </div>
 
                         {# fenêtre modale #}
-                    <div id="modal1" class="modal">
+                    <div id="modal" class="modal">
                         <div class="modal-content">
-                            <h3>{{ projet.titre }}</h3>
+                            {#<h3>{{ projet.titre }}</h3>
                             <p>{{ projet.description }}</p>
                             {% if projet.lien != null %}
                                 <a href="{{ projet.lien }}">lien vers le projet en ligne</a>
                             {% endif %}
+                            #}
+                            plop
                         </div>
                         <div class="modal-footer">
                             <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">fermer</a>
@@ -89,53 +91,82 @@
         <section class="container quijesuis">
             <h2>Langages et outils</h2>
             <hr>
-            <div class ="row langages">
+            <div class="row">
+                <div class ="col l6 s12 langages">
 
-                <h3>Mes langages</h3>
+                    <h3>Mes langages</h3>
 
-                <div class="col s4 m2">
-                    <img src="{{ asset('media/html.png') }}">
+                    <div class="col m3 s4">
+                        <img src="{{ asset('media/html.png') }}">
+                    </div>
+
+                    <div class="col s4 m3">
+                        <img src="{{ asset('media/css.png') }}">
+                    </div>
+
+                    <div class="col s4 m3">
+                        <img src="{{ asset('media/js.png') }}">
+                    </div>
+
+                    <div class="col s4 m3">
+                        <img src="{{ asset('media/git.png') }}">
+                    </div>
+
+                    <div class="col s4 m3">
+                        <img src="{{ asset('media/php.png') }}">
+                    </div>
+
+                    <div class="col s4 m3">
+                        <img src="{{ asset('media/mysql.png') }}">
+                    </div>
+
                 </div>
 
-                <div class="col s4 m2">
-                    <img src="{{ asset('media/css.png') }}">
-                </div>
+                
 
-                <div class="col s4 m2">
-                    <img src="{{ asset('media/js.png') }}">
-                </div>
+                <div class="col l6 s12 outils">
 
-                <div class="col s4 m2">
-                    <img src="{{ asset('media/php.png') }}">
-                </div>
+                    <h3>Mes outils</h3>
 
-                <div class="col s4 m2">
-                    <img src="{{ asset('media/mysql.png') }}">
-                </div>
+                    <div class="col s4 m3">
+                        <img src="{{ asset('media/phpstorm.png') }}">
+                    </div>
 
-                <div class="col s4 m2">
-                    <img src="{{ asset('media/git.png') }}">
-                </div>
-            </div>
-
-            <br/>
-
-            <div class="row outils">
-
-                <h3>Mes outils</h3>
-
-                <div class="col s4 m2">
-                    <img src="{{ asset('media/phpstorm.png') }}">
-                </div>
-
-                <div class="col s4 m2">
-                    <img src="{{ asset('media/photoshop.jpg') }}">
+                    <div class="col s4 m3">
+                        <img src="{{ asset('media/photoshop.jpg') }}">
+                    </div>
                 </div>
             </div>
 
 
         </section>
 
+        <section id="other">
+            <h2>Autres réalisations</h2>
+            <hr>
+            <div class="row container">
+                <div class="col l6 s12">
+
+                    <h3>Mes badges et certifs</h3>
+
+                </div>
+
+                <div class="col l6 s12">
+
+                    <h3>Réalisations</h3>
+                    <p>traduction d'un article sur la POO et d'un tuto Illustrator</p>
+                    <p>Tableaux Geeks sous Illustrator</p>
+                    <p>Affiches évènementielles</p>
+
+
+                </div>
+
+
+
+            </div>
+
+
+        </section>
 
 
         <section id="culture">

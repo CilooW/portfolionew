@@ -110,8 +110,15 @@ h2 {
 
 /*Langages et outils */
 
-.langages img {
-    width: 100px;
+.langages h3, .outils h3 {
+    font-size : 1.8em;
+    text-align: center;
+    margin-bottom:30px;
+}
+
+.langages {
+    border-right:2px;
+    border-right-style: ridge;
 }
 
 /* Culture */
