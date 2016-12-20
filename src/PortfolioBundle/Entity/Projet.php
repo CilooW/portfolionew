@@ -2,11 +2,14 @@
 
 namespace PortfolioBundle\Entity;
 
-/**
- * Projet
- */
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+
+
+
 class Projet
 {
+
     /**
      * @var int
      */
@@ -183,5 +186,10 @@ class Projet
     public function getTags()
     {
         return $this->tags;
+    }
+
+    public function __toString()
+    {
+        return "";
     }
 }

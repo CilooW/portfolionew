@@ -24,11 +24,22 @@
                 <div class="col s3">
                     <img src="{{ asset('media/profil.jpg') }}">
                 </div>
-                <p class="desc_me col s9"> un petit padawan à la recherche de la vérité!
-                    depuis petite j'ai toujours adoré les jeux de logiques, les puzzles, les problèmes,
-                    les énigmes. Après un parcours chaotique pour tenter de rentrer dans le moule des assistantes
-                    manager et autres joyeusetés administratives, j'ai enfin ouvert LA porte qui m'a mené vers mon
-                    destin ultiiiime.... LE CODE. J'aspire pouvoir vivre du métier de développeur Web, et ce, dès que possible!</p>
+                <p class="desc_me col s9"> Je m'appelle Cécile, et j'ai <span class="fiveyears">5 ans</span> 26 ans! <br>
+                    Passionnée de culture Geek au sens très large (des jeux vidéos au japonais en passant par les univers fantastiques et SF, l'informatique hardware ET software...),
+                    j'aspire à trouver un petit coin de bureau pas trop loin d'un chauffage, ayant des gênes de chat qui traînent dans mon ADN, quelque part...
+                    <br>
+                    Aussi, si vous n'êtes pas allergique à la bonne humeur, vous pouvez m'adopter!
+                    Je mange des confiseries, ne mords (presque) pas, et je vous ramène des zerglings de temps en temps, si vous êtes sympas.
+
+                </p>
+                <p class="desc_me col s9">
+                    Plus sérieusement, après un parcours chaotique pour tenter de rentrer dans le moule des assistantes
+                    manager et autres joyeusetés administratives, je me suis intéressée au développement Web, de manière autodidacte dans un premier temps, puis avec la Wild Code Schhol
+                    pour continuer mon apprentissage.
+                    <br>
+                    Mon goût prononcé pour l'art en général tends à me diriger naturellement vers l'univers merveilleux (ou pas) du front-end. Mais je ne suis pas fermée au back-end, ayant principalement été formée sur PHP et SYMFONY 2.8.
+                    <br>
+                    J'adore apprendre, alors n'hésitez pas à me contacter :)</p>
             </div>
 
             <div class="row keywords">
@@ -49,10 +60,26 @@
 
             <div class="container">
                 <div class="row blockprojet">
-                    <!-- ici une boucle for pour aller chercher tous les projets avec findAll du repository projet-->
+                    {% for projet in projets %}
+
                     <div class="col s12 m6 l4 proj">
-                        <img src="{{ asset('media/biesse.png') }}"/>
+                        <a class="waves-effect waves-light open-modal" href="#modal-{{ projet.id }}"><img src="{{ upload_directory }}/{{ projet.imgpath }}"/></a>
                     </div>
+
+                        {# fenêtre modale #}
+                    <div id="modal-{{ projet.id }}" class="modal ">
+                        <div class="modal-content">
+                            <h3>{{ projet.titre }}</h3>
+                            <p>{{ projet.description }}</p>
+                            {% if projet.lien != null %}
+                                <a href="{{ projet.lien }}">lien vers le projet en ligne</a>
+                            {% endif %}
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">fermer</a>
+                        </div>
+                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </section>
@@ -62,53 +89,83 @@
         <section class="container quijesuis">
             <h2>Langages et outils</h2>
             <hr>
-            <div class ="row langages">
+            <div class="row">
+                <div class ="col l6 s12 langages">
 
-                <h3>Mes langages</h3>
+                    <h3>Mes langages</h3>
 
-                <div class="col s4 m2">
-                    <img src="{{ asset('media/html.png') }}">
+                    <div class="col m3 s4">
+                        <img src="{{ asset('media/html.png') }}">
+                    </div>
+
+                    <div class="col s4 m3">
+                        <img src="{{ asset('media/css.png') }}">
+                    </div>
+
+                    <div class="col s4 m3">
+                        <img src="{{ asset('media/js.png') }}">
+                    </div>
+
+                    <div class="col s4 m3">
+                        <img src="{{ asset('media/git.png') }}">
+                    </div>
+
+                    <div class="col s4 m3">
+                        <img src="{{ asset('media/php.png') }}">
+                    </div>
+
+                    <div class="col s4 m3">
+                        <img src="{{ asset('media/mysql.png') }}">
+                    </div>
+
                 </div>
 
-                <div class="col s4 m2">
-                    <img src="{{ asset('media/css.png') }}">
-                </div>
+                
 
-                <div class="col s4 m2">
-                    <img src="{{ asset('media/js.png') }}">
-                </div>
+                <div class="col l6 s12 outils">
 
-                <div class="col s4 m2">
-                    <img src="{{ asset('media/php.png') }}">
-                </div>
+                    <h3>Mes outils</h3>
 
-                <div class="col s4 m2">
-                    <img src="{{ asset('media/mysql.png') }}">
-                </div>
+                    <div class="col s4 m3">
+                        <img src="{{ asset('media/phpstorm.png') }}">
+                    </div>
 
-                <div class="col s4 m2">
-                    <img src="{{ asset('media/git.png') }}">
-                </div>
-            </div>
-
-            <br/>
-
-            <div class="row outils">
-
-                <h3>Mes outils</h3>
-
-                <div class="col s4 m2">
-                    <img src="{{ asset('media/phpstorm.png') }}">
-                </div>
-
-                <div class="col s4 m2">
-                    <img src="{{ asset('media/photoshop.jpg') }}">
+                    <div class="col s4 m3">
+                        <img src="{{ asset('media/photoshop.jpg') }}">
+                    </div>
                 </div>
             </div>
 
 
         </section>
 
+        <section id="other">
+            <h2>Autres réalisations</h2>
+            <hr>
+            <div class="row container">
+                <div class="col l6 s12">
+
+                    <h3>Mes badges et certifs</h3>
+
+                </div>
+
+                <div class="col l6 s12">
+
+                    <h3>Réalisations</h3>
+                    <p>traduction d'un article sur la POO et d'un tuto Illustrator</p>
+                    <p>Tableaux Geeks sous Illustrator</p>
+                    <p>Affiches évènementielles</p>
+                    <p>un petit jeu codé en C</p>
+
+
+                </div>
+
+
+
+            </div>
+
+
+        </section>
 
 
         <section id="culture">
