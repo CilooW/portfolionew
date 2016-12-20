@@ -69,13 +69,11 @@
                         {# fenêtre modale #}
                     <div id="modal-{{ projet.id }}" class="modal ">
                         <div class="modal-content">
-                            {#<h3>{{ projet.titre }}</h3>
+                            <h3>{{ projet.titre }}</h3>
                             <p>{{ projet.description }}</p>
                             {% if projet.lien != null %}
                                 <a href="{{ projet.lien }}">lien vers le projet en ligne</a>
                             {% endif %}
-                            #}
-                            plop
                         </div>
                         <div class="modal-footer">
                             <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">fermer</a>
