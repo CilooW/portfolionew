@@ -30,6 +30,18 @@ h2 {
     text-align: center;
 }
 
+.brand-logo{
+    margin-left: 20px;
+}
+
+.nav-wrapper li a {
+    font-size: 1.4em;
+}
+
+.nav-wrapper {
+    background-color: #1c2529;
+}
+
 
 /* section QUI JE SUIS */
 
@@ -45,6 +57,10 @@ h2 {
 .desc_me {
     font-size: 1.3em;
 
+}
+
+.fiveyears {
+    text-decoration: line-through;
 }
 
 .keywords {
@@ -78,6 +94,11 @@ h2 {
 
 }
 
+.projets h2 {
+    color:white;
+    padding-top:20px;
+}
+
 .blockprojet {
     margin-top: 20px;
     padding-bottom: 20px;
@@ -93,8 +114,15 @@ h2 {
 
 /*Langages et outils */
 
-.langages img {
-    width: 100px;
+.langages h3, .outils h3 {
+    font-size : 1.8em;
+    text-align: center;
+    margin-bottom:30px;
+}
+
+.langages {
+    border-right:2px;
+    border-right-style: ridge;
 }
 
 .langages img {
@@ -130,4 +158,25 @@ h2 {
 
 #culture img {
     max-width: 300px;
+}
+
+/* Footer */
+
+footer.page-footer {
+    background-color: #1c2529;
+}
+
+.social-network {
+    font-size:2em;
+    text-align: center;
+}
+.social-network h5 {
+    margin-bottom: 20px;
+}
+.social-network i {
+    color: #a6e1ec;
+}
+
+.social-network a {
+    margin-left: 20px;
 }

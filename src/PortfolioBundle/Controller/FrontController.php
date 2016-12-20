@@ -27,9 +27,12 @@ class FrontController extends Controller
         $repo = $em->getRepository('PortfolioBundle:Citation');
         $citation = $repo->getRandomQuote();
 
+        $projets = $em->getRepository('PortfolioBundle:Projet')->findAll();
+
 
         return $this->render('PortfolioBundle:Default:index.html.twig', array(
             'citation' => $citation[0],
+            'projets' => $projets,
         ));
     }
 }

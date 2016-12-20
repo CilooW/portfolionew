@@ -35,6 +35,8 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    globals:
+        upload_directory: /%upload_directory%
 
 # Doctrine Configuration
 doctrine:
@@ -84,7 +86,7 @@ easy_admin:
                 title: "Liste des %%entity_label%%"
                 fields:
                     - 'image'
-                    - { property: 'image', type: 'image', base_path: '/media/' }
+                    - { property: 'image', type: 'image', base_path: '%upload_directory%' }
         Tag:
             class: PortfolioBundle\Entity\Tag
             label: 'Tags'
@@ -94,3 +96,9 @@ easy_admin:
             form:  # <-- 'form' is applied to both 'new' and 'edit' views
                             fields:
                                 - 'tech'
+vich_uploader:
+    db_driver: orm
+    mappings:
+        images:
+            uri_prefix:         %upload_directory%
+            upload_destination: %kernel.root_dir%/../web/uploads/
