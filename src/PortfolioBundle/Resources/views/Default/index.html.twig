@@ -24,11 +24,30 @@
                 <div class="col s3">
                     <img src="{{ asset('media/profil.jpg') }}">
                 </div>
+<<<<<<< Updated upstream
                 <p class="desc_me col s9"> un petit padawan à la recherche de la vérité!
                     depuis petite j'ai toujours adoré les jeux de logiques, les puzzles, les problèmes,
                     les énigmes. Après un parcours chaotique pour tenter de rentrer dans le moule des assistantes
                     manager et autres joyeusetés administratives, j'ai enfin ouvert LA porte qui m'a mené vers mon
                     destin ultiiiime.... LE CODE. J'aspire pouvoir vivre du métier de développeur Web, et ce, dès que possible!</p>
+=======
+                <p class="desc_me col s9"> Je m'appelle Cécile, et j'ai <span class="fiveyears">5 ans</span> 26 ans! <br>
+                    Passionnée de culture Geek au sens très large (des jeux vidéos au japonais en passant par les univers fantastiques et SF, l'informatique hardware ET software...),
+                    j'aspire à trouver un petit coin de bureau pas trop loin d'un chauffage, ayant des gênes de chat qui traînent dans mon ADN, quelque part...
+                    <br>
+                    Aussi, si vous n'êtes pas allergique à la bonne humeur, vous pouvez m'adopter!
+                    Je mange des confiseries, ne mords (presque) pas, et je vous ramène des gâteaux de temps en temps, si vous êtes sympas.
+
+                </p>
+                <p class="desc_me col s9">
+                    Plus sérieusement, après un parcours chaotique pour tenter de rentrer dans le moule des assistantes
+                    manager et autres joyeusetés administratives, je me suis intéressée au développement Web, de manière autodidacte dans un premier temps, puis avec la Wild Code School
+                    pour continuer mon apprentissage.
+                    <br>
+                    Mon goût prononcé pour l'art en général tends à me diriger naturellement vers l'univers merveilleux (ou pas) du front-end. Mais je ne suis pas fermée au back-end, ayant principalement été formée sur PHP et SYMFONY 2.8.
+                    <br>
+                    J'adore apprendre, alors n'hésitez pas à me contacter : <a href="mailto:cecile.angays@yahoo.fr">cecile.angays[at]yahoo.fr</a> ou par hibou postal (mais le mail est tout de même un peu plus rapide.)</p>
+>>>>>>> Stashed changes
             </div>
 
             <div class="row keywords">
@@ -49,14 +68,35 @@
 
             <div class="container">
                 <div class="row blockprojet">
-                    <!-- ici une boucle for pour aller chercher tous les projets avec findAll du repository projet-->
-                    <div class="col s12 m6 l4 proj">
-                        <img src="{{ asset('media/biesse.png') }}"/>
+
+                    {% for projet in projets %}
+
+                    <div class="col s12 m4 proj">
+                        <a class="waves-effect waves-light open-modal" href="#modal-{{ projet.id }}"><img src="{{ upload_directory }}/{{ projet.imgpath }}"/></a>
+                    </div>
+
+                        {# fenêtre modale #}
+                    <div id="modal-{{ projet.id }}" class="modal ">
+                        <div class="modal-content">
+                            <h3>{{ projet.titre }}</h3>
+                            <p>{{ projet.description }}</p>
+                            {% if projet.lien != null %}
+                                <a href="{{ projet.lien }}">lien vers le projet en ligne</a>
+                            {% endif %}
+                            <div class="row">
+                                <div class="col s8">
+                                    <img src="{{ upload_directory }}/{{ projet.imgpath }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">fermer</a>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </section>
-
 
 
         <section class="container quijesuis">
@@ -64,31 +104,34 @@
             <hr>
             <div class ="row langages">
 
+
                 <h3>Mes langages</h3>
 
-                <div class="col s4 m2">
-                    <img src="{{ asset('media/html.png') }}">
-                </div>
+                    <div class="col m3 s4">
+                        <img src="{{ asset('media/html.png') }}">
+                    </div>
 
-                <div class="col s4 m2">
-                    <img src="{{ asset('media/css.png') }}">
-                </div>
+                    <div class="col s4 m3">
+                        <img src="{{ asset('media/css.png') }}">
+                    </div>
 
-                <div class="col s4 m2">
-                    <img src="{{ asset('media/js.png') }}">
-                </div>
+                    <div class="col s4 m3">
+                        <img src="{{ asset('media/js.png') }}">
+                    </div>
 
-                <div class="col s4 m2">
-                    <img src="{{ asset('media/php.png') }}">
-                </div>
+                    <div class="col s4 m3">
+                        <img src="{{ asset('media/sf.png') }}">
+                    </div>
 
-                <div class="col s4 m2">
-                    <img src="{{ asset('media/mysql.png') }}">
-                </div>
+                    <div class="col s4 m3">
+                        <img src="{{ asset('media/php.png') }}">
+                    </div>
 
-                <div class="col s4 m2">
-                    <img src="{{ asset('media/git.png') }}">
-                </div>
+                    <div class="col s4 m3">
+                        <img src="{{ asset('media/mysql.png') }}">
+                    </div>
+
+
             </div>
 
             <br/>
@@ -96,6 +139,10 @@
             <div class="row outils">
 
                 <h3>Mes outils</h3>
+
+                <div class="col s4 m3">
+                    <img src="{{ asset('media/git.png') }}">
+                </div>
 
                 <div class="col s4 m2">
                     <img src="{{ asset('media/phpstorm.png') }}">
@@ -106,15 +153,42 @@
                 </div>
             </div>
 
+        </section>
+
+        <section class="other">
+            <div class = container>
+                <h2>Autres réalisations</h2>
+                <hr>
+            </div>
+            <div class="row container">
+
+                <div class="col s12">
+
+                    <p>Ma plus belle réalisation jusqu'à aujourd'hui, reste le développement du concept du Vide Grenier du Geek entre 2010 et 2014 (soit 8 éditions). D'une centaine de visiteurs et quelques stands,
+                    l'évènement est devenu incontournable sur la région de Lyon, avec plus de 2000 visiteurs, des créateurs, des activités et rencontres. Cette activité était bénévole.</p>
+                    <p>Traduction : J'adore parler des langues étrangères! Je parle assez bien anglais et italien, et j'apprends le japonais.
+                        <br> C'est dans cette optique que j'ai traduit un article sur la <a href="https://code.tutsplus.com/tutorials/object-oriented-php-for-beginners--net-12762">POO</a>(en cours de trad!)
+                        et un <a href="https://design.tutsplus.com/fr/tutorials/creating-a-simple-kawaii-yeti-with-basic-shapes-in-adobe-illustrator--vector-10738">tutoriel sur Illustrator</a>.</p>
+                    <p>Tableaux Geeks sous Illustrator : je me suis amusée à faire quelques essais avec le logiciel...</p>
+                    <p>Affiches évènementielles : Pour mes besoins personnels mais aussi dans le cadre de ma précédente association (AoA Production), j'ai utilisé Photoshop pour réaliser des affiches!</p>
+                    <p>Un petit jeu codé en C spécialement créé en suivant les cours Open Classrooms. tu veux le tester? (c'est du .exe!) <a class="btn" href="#!">cliques ici!</a></p>
+
+
+
+                </div>
+            </div>
+
 
         </section>
 
 
 
         <section id="culture">
+            <div class="container">
             <h2>Culture</h2>
             <hr>
-            <div class="row container">
+            </div>
+            <div class="row">
 
                 <div class="col s4 m2">
                     <img src="{{ asset('media/bordage.jpg') }}">

@@ -87,10 +87,43 @@ h2 {
     height:235px;
 }
 
+.blockprojet .modal-content img {
+    height: 235px;
+}
+
 /*Langages et outils */
 
 .langages img {
     width: 100px;
+}
+
+.langages img {
+    height: 108px;
+}
+
+/* Autres réalisations */
+
+.other {
+    background-image: url(../media/kaylag.jpg);
+
+    /*imgfix*/
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 100%;
+    position: relative;
+
+    /* autres réal: texte */
+
+    color:white;
+    font-size: 1.3em;
+
+}
+
+.other h2 {
+    color:white;
+    padding-top:20px;
 }
 
 /* Culture */
