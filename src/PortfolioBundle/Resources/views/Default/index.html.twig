@@ -63,11 +63,11 @@
                     {% for projet in projets %}
 
                     <div class="col s12 m6 l4 proj">
-                        <a class="waves-effect waves-light" href="#modal"><img src="{{ upload_directory }}/{{ projet.imgpath }}"/></a>
+                        <a class="waves-effect waves-light open-modal" href="#modal-{{ projet.id }}"><img src="{{ upload_directory }}/{{ projet.imgpath }}"/></a>
                     </div>
 
                         {# fenêtre modale #}
-                    <div id="modal" class="modal">
+                    <div id="modal-{{ projet.id }}" class="modal ">
                         <div class="modal-content">
                             {#<h3>{{ projet.titre }}</h3>
                             <p>{{ projet.description }}</p>
@@ -157,6 +157,7 @@
                     <p>traduction d'un article sur la POO et d'un tuto Illustrator</p>
                     <p>Tableaux Geeks sous Illustrator</p>
                     <p>Affiches évènementielles</p>
+                    <p>un petit jeu codé en C</p>
 
 
                 </div>
