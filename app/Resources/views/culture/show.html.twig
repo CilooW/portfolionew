@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Culture</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ culture.id }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ culture.type }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ culture.title }}</td>
+            </tr>
+            <tr>
+                <th>Why</th>
+                <td>{{ culture.why }}</td>
+            </tr>
+            <tr>
+                <th>Img</th>
+                <td>{{ culture.img }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('culture_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('culture_edit', { 'id': culture.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

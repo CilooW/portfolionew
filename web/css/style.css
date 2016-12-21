@@ -12,7 +12,7 @@
 .accueil .quote {
     position:absolute;
     display: block;
-    top : 400px;
+    top : 450px;
     left: 50px;
     color: white;
 }
@@ -129,6 +129,21 @@ h2 {
     height: 108px;
 }
 
+.modal-content img {
+    border: 1px solid black;
+    margin-top: 20px;
+}
+
+.modal-content {
+    font-size : 1.3em;
+}
+
+.proj p {
+    text-align: center;
+    font-size:1.8em;
+    color:white;
+}
+
 /* Autres réalisations */
 
 .other {
@@ -157,8 +172,15 @@ h2 {
 /* Culture */
 
 #culture img {
-    max-width: 300px;
+    max-width: 70px;
 }
+
+#culture table{
+    font-size:1.3em;
+    max-width:1400px;
+    margin:auto;
+}
+
 
 /* Footer */
 

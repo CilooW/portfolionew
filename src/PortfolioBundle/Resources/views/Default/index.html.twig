@@ -26,8 +26,8 @@
                 </div>
 
                 <p class="desc_me col s9"> Je m'appelle Cécile, et j'ai <span class="fiveyears">5 ans</span> 26 ans! <br>
-                    Passionnée de culture Geek au sens très large (des jeux vidéos au japonais en passant par les univers fantastiques et SF, l'informatique hardware ET software...),
-                    j'aspire à trouver un petit coin de bureau pas trop loin d'un chauffage, ayant des gênes de chat qui traînent dans mon ADN, quelque part...
+                    Passionnée de culture Geek au sens très large (des jeux vidéos à la langue japonaise en passant par les univers fantastiques et SF, l'informatique hardware ET software...),
+                    j'aspire à trouver un petit coin de bureau pas trop loin d'un chauffage, ayant des gênes de chat qui traînent dans mon ADN, quelque part.
                     <br>
                     Aussi, si vous n'êtes pas allergique à la bonne humeur, vous pouvez m'adopter!
                     Je mange des confiseries, ne mords (presque) pas, et je vous ramène des gâteaux de temps en temps, si vous êtes sympas.
@@ -65,7 +65,7 @@
                     {% for projet in projets %}
 
                     <div class="col s12 m4 proj">
-
+                        <p>{{ projet.titre }}</p>
                         <a class="waves-effect waves-light open-modal" href="#modal-{{ projet.id }}"><img src="{{ upload_directory }}/{{ projet.imgpath }}"/></a>
                     </div>
 
@@ -77,6 +77,7 @@
                             {% if projet.lien != null %}
                                 <a href="{{ projet.lien }}">lien vers le projet en ligne</a>
                             {% endif %}
+                            <br>
 
                             <div class="row">
                                 <div class="col s8">
@@ -141,6 +142,10 @@
                     <h3>Mes outils</h3>
 
                     <div class="col s4 m3">
+                        <img src="{{ asset('media/git.png') }}">
+                    </div>
+
+                    <div class="col s4 m3">
                         <img src="{{ asset('media/phpstorm.png') }}">
                     </div>
 
@@ -165,11 +170,11 @@
                     <p>Ma plus belle réalisation jusqu'à aujourd'hui, reste le développement du concept du Vide Grenier du Geek entre 2010 et 2014 (soit 8 éditions). D'une centaine de visiteurs et quelques stands,
                     l'évènement est devenu incontournable sur la région de Lyon, avec plus de 2000 visiteurs, des créateurs, des activités et rencontres. Cette activité était bénévole.</p>
                     <p>Traduction : J'adore parler des langues étrangères! Je parle assez bien anglais et italien, et j'apprends le japonais.
-                        <br> C'est dans cette optique que j'ai traduit un article sur la <a href="https://code.tutsplus.com/tutorials/object-oriented-php-for-beginners--net-12762">POO</a>(en cours de trad!)
+                        <br> C'est dans cette optique que j'ai traduit de l'anlgais vers le français un article sur la <a href="https://code.tutsplus.com/tutorials/object-oriented-php-for-beginners--net-12762">POO</a>(en cours de trad!)
                         et un <a href="https://design.tutsplus.com/fr/tutorials/creating-a-simple-kawaii-yeti-with-basic-shapes-in-adobe-illustrator--vector-10738">tutoriel sur Illustrator</a>.</p>
                     <p>Tableaux Geeks sous Illustrator : je me suis amusée à faire quelques essais avec le logiciel...</p>
                     <p>Affiches évènementielles : Pour mes besoins personnels mais aussi dans le cadre de ma précédente association (AoA Production), j'ai utilisé Photoshop pour réaliser des affiches!</p>
-                    <p>Un petit jeu codé en C spécialement créé en suivant les cours Open Classrooms. tu veux le tester? (c'est du .exe!) <a class="btn" href="#!">cliques ici!</a></p>
+                    <p>Un petit jeu codé en C spécialement créé en suivant les cours Open Classrooms. tu veux le tester? (c'est du .exe!) <a class="btn" href="{{ asset('media/other-real/plus_ou_moins_le_jeu_de_la_mort.exe') }}">cliques ici!</a></p>
 
 
 
@@ -185,29 +190,37 @@
             <h2>Culture</h2>
             <hr>
             </div>
-            <div class="row">
+            <table class="table centered">
+                <tr class="row">
+                    <td><img src="{{ asset('media/bordage.jpg') }}"></td>
+                    <td>Mon livre :</td>
+                    <td>Les guerriers du silence, de Pierre Bordage</td>
 
-                <div class="col s4 m2">
-                    <img src="{{ asset('media/bordage.jpg') }}">
-                </div>
+                    <td><img src="{{ asset('media/chihiro.jpg') }}"></td>
+                    <td>Mon film d'animation :</td>
+                    <td>Le voyage de Chihiro, de Hayao Miyazaki</td>
+                </tr>
 
-                <div class="col s4 m2">
-                    <img src="{{ asset('media/chihiro.jpg') }}">
-                </div>
+                <tr>
+                    <td><img src="{{ asset('media/equilibrium.jpg') }}"></td>
+                    <td>Mon film :</td>
+                    <td>Equilibrium, de Kurt Wimmer</td>
 
-                <div class="col s4 m2">
-                    <img src="{{ asset('media/zerg.jpg') }}">
-                </div>
+                    <td><img src="{{ asset('media/zerg.jpg') }}"></td>
+                    <td>Mon jeu vidéo :</td>
+                    <td>Starcraft 2, par Blizzard </td>
+                </tr>
 
-                <div class="col s4 m2">
-                    <img src="{{ asset('media/equilibrium.jpg') }}">
-                </div>
+                <tr>
+                    <td><img src="{{ asset('media/somenightsfun.jpg') }}"></td>
+                    <td>Ma musique :</td>
+                    <td>Some Nights, Fun </td>
 
-                <div class="col s4 m2">
-                    <img src="{{ asset('media/ciloojap.jpg') }}">
-                </div>
-
-            </div>
+                    <td><img src="{{ asset('media/ciloojap.jpg') }}"></td>
+                    <td>Mon voyage :</td>
+                    <td>Le japon, Mars 2016 </td>
+                </tr>
+            </table>
 
 
         </section>

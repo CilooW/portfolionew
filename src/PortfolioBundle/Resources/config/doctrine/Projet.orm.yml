@@ -20,6 +20,7 @@ PortfolioBundle\Entity\Projet:
         lien:
             type: string
             length: 255
+            nullable: true
 
     manyToMany:
         tags:

@@ -1,0 +1,24 @@
+PortfolioBundle\Entity\Culture:
+    type: entity
+    table: null
+    repositoryClass: PortfolioBundle\Repository\CultureRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        type:
+            type: string
+            length: '100'
+        title:
+            type: string
+            length: 255
+        why:
+            type: string
+            length: 255
+        img:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

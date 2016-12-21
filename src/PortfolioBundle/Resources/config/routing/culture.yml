@@ -1,0 +1,24 @@
+culture_index:
+    path:     /
+    defaults: { _controller: "PortfolioBundle:Culture:index" }
+    methods:  GET
+
+culture_show:
+    path:     /{id}/show
+    defaults: { _controller: "PortfolioBundle:Culture:show" }
+    methods:  GET
+
+culture_new:
+    path:     /new
+    defaults: { _controller: "PortfolioBundle:Culture:new" }
+    methods:  [GET, POST]
+
+culture_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "PortfolioBundle:Culture:edit" }
+    methods:  [GET, POST]
+
+culture_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "PortfolioBundle:Culture:delete" }
+    methods:  DELETE
