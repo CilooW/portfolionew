@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Cultures list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Type</th>
+                <th>Title</th>
+                <th>Why</th>
+                <th>Img</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for culture in cultures %}
+            <tr>
+                <td><a href="{{ path('culture_show', { 'id': culture.id }) }}">{{ culture.id }}</a></td>
+                <td>{{ culture.type }}</td>
+                <td>{{ culture.title }}</td>
+                <td>{{ culture.why }}</td>
+                <td>{{ culture.img }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('culture_show', { 'id': culture.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('culture_edit', { 'id': culture.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('culture_new') }}">Create a new culture</a>
+        </li>
+    </ul>
+{% endblock %}

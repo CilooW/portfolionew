@@ -97,4 +97,9 @@ class Tag
     {
         return $this->projets;
     }
+
+    public function __toString()
+    {
+        return  "";
+    }
 }

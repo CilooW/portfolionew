@@ -12,7 +12,7 @@
 .accueil .quote {
     position:absolute;
     display: block;
-    top : 400px;
+    top : 450px;
     left: 50px;
     color: white;
 }
@@ -108,6 +108,10 @@ h2 {
     height:235px;
 }
 
+.blockprojet .modal-content img {
+    height: 235px;
+}
+
 /*Langages et outils */
 
 .langages h3, .outils h3 {
@@ -121,11 +125,66 @@ h2 {
     border-right-style: ridge;
 }
 
+.langages img {
+    height: 108px;
+}
+
+.modal-content img {
+    border: 1px solid black;
+    margin-top: 20px;
+}
+
+.modal-content {
+    font-size : 1.3em;
+}
+
+.proj p {
+    text-align: center;
+    font-size:1.8em;
+    color:white;
+}
+
+/* Autres réalisations */
+
+.other {
+    background-image: url(../media/kaylag3.jpg);
+
+    /*imgfix*/
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 100%;
+    position: relative;
+
+    /* autres réal: texte */
+
+    color:white;
+    font-size: 1.3em;
+
+}
+
+.other h2 {
+    color:white;
+    padding-top:20px;
+}
+
 /* Culture */
 
 #culture img {
-    max-width: 300px;
+    max-width: 70px;
 }
+
+#culture table{
+    font-size:1.3em;
+    max-width:1400px;
+    margin:auto;
+}
+
+#culture p {
+    font-size: 1.3em;
+}
+
 
 /* Footer */
 

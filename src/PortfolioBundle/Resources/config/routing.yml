@@ -10,6 +10,10 @@ portfolio_tag:
         resource: "@PortfolioBundle/Resources/config/routing/tag.yml"
         prefix:   /tag
 
+portfolio_culture:
+        resource: "@PortfolioBundle/Resources/config/routing/culture.yml"
+        prefix:   /culture
+
 portfolio_homepage:
     path:     /
     defaults: { _controller: PortfolioBundle:Front:index }
