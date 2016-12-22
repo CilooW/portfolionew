@@ -3,8 +3,11 @@
 namespace PortfolioBundle\Controller;
 
 use PortfolioBundle\Entity\Culture;
+use PortfolioBundle\Form\CultureType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\File\File;
 
 /**
  * Culture controller.
@@ -38,6 +41,15 @@ class CultureController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $file = $culture->getImg();
+            $fileName = md5(uniqid()).'.'.$file->guessExtension(); // md5 est un format de cryptage et guessExtenstion est pour mettre la meme extension qu'avant
+            $file->move(
+                $this->getParameter('upload_directory'),
+                $fileName
+            );
+            $culture->setImg($fileName);
+
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($culture);
             $em->flush($culture);
@@ -75,7 +87,10 @@ class CultureController extends Controller
         $editForm = $this->createForm('PortfolioBundle\Form\CultureType', $culture);
         $editForm->handleRequest($request);
 
+
         if ($editForm->isSubmitted() && $editForm->isValid()) {
+            //$culture->setImg(new File($this->getParameter('upload_directory').'/'.$culture->getImg())); //ajouté pour éviter d'avoir à recharger la même image, mais pb car getImg ne retourne rien!
+
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('culture_edit', array('id' => $culture->getId()));

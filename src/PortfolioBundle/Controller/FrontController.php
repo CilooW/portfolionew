@@ -29,10 +29,13 @@ class FrontController extends Controller
 
         $projets = $em->getRepository('PortfolioBundle:Projet')->findAll();
 
+        $cultures = $em->getRepository('PortfolioBundle:Culture')->findAll();
+
 
         return $this->render('PortfolioBundle:Default:index.html.twig', array(
             'citation' => $citation[0],
             'projets' => $projets,
+            'cultures' => $cultures,
         ));
     }
 }

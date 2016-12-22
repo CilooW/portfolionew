@@ -147,7 +147,7 @@ h2 {
 /* Autres réalisations */
 
 .other {
-    background-image: url(../media/kaylag.jpg);
+    background-image: url(../media/kaylag3.jpg);
 
     /*imgfix*/
     background-attachment: fixed;
@@ -179,6 +179,10 @@ h2 {
     font-size:1.3em;
     max-width:1400px;
     margin:auto;
+}
+
+#culture p {
+    font-size: 1.3em;
 }
 
 

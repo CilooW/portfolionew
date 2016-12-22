@@ -14,7 +14,11 @@ class ProjetType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('titre')->add('description')->add('imgpath', FileType::class, array('label'=>'Image (jpg, gif, png file)'))->add('lien')->add('tags')        ;
+        $builder->add('titre')
+                ->add('description')
+                ->add('imgpath', FileType::class, array('label'=>'Image (jpg, gif, png file)', 'data_class' => null ))
+                ->add('lien')
+                ->add('tags')        ;
     }
     
     /**

@@ -187,39 +187,21 @@
 
         <section id="culture">
             <div class="container">
-            <h2>Culture</h2>
+            <h2>Culture & Loisirs</h2>
             <hr>
+
+            <p>A mes heures perdues, j'aime particulièrement faire de la musique, dessiner, lire, regarder des séries(non, pas Game Of Throne, désolée!), et jouer aux jeux vidéos.
+                J'ai donc rassemblé ici quelques une de mes références dans chacun de ces domaines, un peu comme un CV mais uniquement basé sur ma culture et mes loisirs.</p>
             </div>
-            <table class="table centered">
+            <table class="table">
+                {% for culture in cultures %}
                 <tr class="row">
-                    <td><img src="{{ asset('media/bordage.jpg') }}"></td>
-                    <td>Mon livre :</td>
-                    <td>Les guerriers du silence, de Pierre Bordage</td>
-
-                    <td><img src="{{ asset('media/chihiro.jpg') }}"></td>
-                    <td>Mon film d'animation :</td>
-                    <td>Le voyage de Chihiro, de Hayao Miyazaki</td>
+                    <td><img src="{{ upload_directory }}/{{ culture.img }}"></td>
+                    <td>{{ culture.type }}</td>
+                    <td>{{ culture.title }}</td>
+                    <td>{{ culture.why }}</td>
                 </tr>
-
-                <tr>
-                    <td><img src="{{ asset('media/equilibrium.jpg') }}"></td>
-                    <td>Mon film :</td>
-                    <td>Equilibrium, de Kurt Wimmer</td>
-
-                    <td><img src="{{ asset('media/zerg.jpg') }}"></td>
-                    <td>Mon jeu vidéo :</td>
-                    <td>Starcraft 2, par Blizzard </td>
-                </tr>
-
-                <tr>
-                    <td><img src="{{ asset('media/somenightsfun.jpg') }}"></td>
-                    <td>Ma musique :</td>
-                    <td>Some Nights, Fun </td>
-
-                    <td><img src="{{ asset('media/ciloojap.jpg') }}"></td>
-                    <td>Mon voyage :</td>
-                    <td>Le japon, Mars 2016 </td>
-                </tr>
+                    {% endfor %}
             </table>
 
 
