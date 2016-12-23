@@ -83,14 +83,18 @@ class CultureController extends Controller
      */
     public function editAction(Request $request, Culture $culture)
     {
+        $img = $culture->getImg();
         $deleteForm = $this->createDeleteForm($culture);
         $editForm = $this->createForm('PortfolioBundle\Form\CultureType', $culture);
         $editForm->handleRequest($request);
 
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
-            //$culture->setImg(new File($this->getParameter('upload_directory').'/'.$culture->getImg())); //ajouté pour éviter d'avoir à recharger la même image, mais pb car getImg ne retourne rien!
 
+            if ($culture->getImg() == ""){
+                $culture->setImg($img);
+            }
+            
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('culture_edit', array('id' => $culture->getId()));

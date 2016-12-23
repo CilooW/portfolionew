@@ -5,7 +5,7 @@
     <div id="all">
         <section class="accueil">
             <div class="row">
-                <div class="quote col s6">
+                <div class="quote col l6 s12">
 
                     <!-- ici une boucle for avec une phrase random à chaque hover de la souris-->
                     <p id="citation">"{{ citation.extrait }}"</p>
@@ -21,18 +21,18 @@
             <h2>Qui je suis?</h2>
             <hr>
             <div class="row">
-                <div class="col s3">
+                <div class="col s12 l3 centerimg">
                     <img src="{{ asset('media/profil.jpg') }}">
                 </div>
 
-                <p class="desc_me col s9"> Je m'appelle Cécile, et j'ai <span class="fiveyears">5 ans</span> 26 ans! <br>
+                <p class="desc_me col l9 s12"> Je m'appelle Cécile, et j'ai <span class="fiveyears">5 ans</span> 26 ans! <br>
                     Passionnée de culture Geek au sens très large (des jeux vidéos à la langue japonaise en passant par les univers fantastiques et SF, l'informatique hardware ET software...),
                     j'aspire à trouver un petit coin de bureau pas trop loin d'un chauffage, ayant des gênes de chat qui traînent dans mon ADN, quelque part.
                     <br>
                     Aussi, si vous n'êtes pas allergique à la bonne humeur, vous pouvez m'adopter!
                     Je mange des confiseries, ne mords (presque) pas, et je vous ramène des gâteaux de temps en temps, si vous êtes sympas.
                 </p>
-                <p class="desc_me col s9">
+                <p class="desc_me col l9 s12">
                     Plus sérieusement, après un parcours chaotique pour tenter de rentrer dans le moule des assistantes
                     manager et autres joyeusetés administratives, je me suis intéressée au développement Web, de manière autodidacte dans un premier temps, puis avec la Wild Code School
                     pour continuer mon apprentissage.
@@ -44,9 +44,9 @@
             </div>
 
             <div class="row keywords">
-                <p class="col s4 keyword"><span class="hashtag">#</span> Créative</p>
-                <p class="col s4 keyword"><span class="hashtag">#</span> Spontanée</p>
-                <p class="col s4 keyword"><span class="hashtag">#</span> Souriante</p>
+                <p class="col l4 s12 keyword"><span class="hashtag">#</span> Créative</p>
+                <p class="col l4 s12 keyword"><span class="hashtag">#</span> Spontanée</p>
+                <p class="col l4 s12 keyword"><span class="hashtag">#</span> Souriante</p>
             </div>
         </section>
 
@@ -193,7 +193,7 @@
             <p>A mes heures perdues, j'aime particulièrement faire de la musique, dessiner, lire, regarder des séries(non, pas Game Of Throne, désolée!), et jouer aux jeux vidéos.
                 J'ai donc rassemblé ici quelques une de mes références dans chacun de ces domaines, un peu comme un CV mais uniquement basé sur ma culture et mes loisirs.</p>
             </div>
-            <table class="table">
+            <table class="table table-responsive">
                 {% for culture in cultures %}
                 <tr class="row">
                     <td><img src="{{ upload_directory }}/{{ culture.img }}"></td>

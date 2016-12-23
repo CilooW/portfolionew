@@ -12,7 +12,7 @@
 .accueil .quote {
     position:absolute;
     display: block;
-    top : 450px;
+    top : 50%;
     left: 50px;
     color: white;
 }
@@ -26,9 +26,29 @@
     text-align: right;
 }
 
+                @media screen and (max-width: 640px) {
+                    .accueil .quote {
+                        top:40%;
+                    }
+
+                    #citation {
+                        font-size: 2em;
+
+                    }
+
+                    #auteur {
+                        font-size: 1.3em;
+                    }
+                }
+
 h2 {
     text-align: center;
 }
+                @media screen and (max-width: 640px) {
+                    h2 {
+                        font-size: 2em;
+                    }
+                }
 
 .brand-logo{
     margin-left: 20px;
@@ -54,6 +74,12 @@ h2 {
     width:80%;
 }
 
+                @media screen and (max-width: 640px) {
+                    .centerimg {
+                        text-align: center;
+                    }
+                }
+
 .desc_me {
     font-size: 1.3em;
 
@@ -70,14 +96,16 @@ h2 {
     margin-bottom: 20px;
 }
 
-.keyword {
-
-    border-radius: 2%;
-}
-
 .hashtag {
     font-weight: bold;
 }
+
+                @media screen and (max-width: 640px) {
+                    .keyword {
+                        margin-top:0px;
+                        margin-bottom:0px;
+                    }
+                }
 
 /* Mes Projets */
 
@@ -128,6 +156,22 @@ h2 {
 .langages img {
     height: 108px;
 }
+
+                @media screen and (max-width: 640px) {
+                    .langages {
+                        border-right: 0px;
+                    }
+
+                    .langages img {
+                        height:49px;
+                    }
+
+                    .proj img {
+                        height: 180px;
+                    }
+                }
+
+
 
 .modal-content img {
     border: 1px solid black;
