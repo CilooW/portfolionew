@@ -62,19 +62,29 @@ h2 {
     background-color: #1c2529;
 }
 
+.nav-fixed {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin-bottom: 0;
+    z-index: 997;
+}
 
 /* section QUI JE SUIS */
 
 .quijesuis {
     width: 70%;
+
     margin:0 auto;
 }
 
 .quijesuis img {
     width:80%;
+    height:80%;
 }
 
-                @media screen and (max-width: 640px) {
+                @media screen and (max-width: 992px) {
                     .centerimg {
                         text-align: center;
                     }
@@ -130,6 +140,7 @@ h2 {
 .blockprojet {
     margin-top: 20px;
     padding-bottom: 20px;
+    text-align: center;
 }
 
 .proj img {
@@ -154,24 +165,8 @@ h2 {
 }
 
 .langages img {
-    height: 108px;
+    height: 80%
 }
-
-                @media screen and (max-width: 640px) {
-                    .langages {
-                        border-right: 0px;
-                    }
-
-                    .langages img {
-                        height:49px;
-                    }
-
-                    .proj img {
-                        height: 180px;
-                    }
-                }
-
-
 
 .modal-content img {
     border: 1px solid black;
@@ -187,6 +182,24 @@ h2 {
     font-size:1.8em;
     color:white;
 }
+
+
+                @media screen and (max-width: 992px) {
+                    .langages {
+                        border-right: 0px;
+                    }
+
+                    .proj img, .blockprojet .modal-content img {
+                        height: 180px;
+                    }
+
+                    .blockprojet .modal-content img {
+                        height: 150px;
+                    }
+                    .blockprojet {
+                        text-align: center;
+                    }
+                }
 
 /* Autres réalisations */
 
@@ -229,6 +242,10 @@ h2 {
     font-size: 1.3em;
 }
 
+                @media screen and (max-width: 640px) {
+                    .why {display:none}
+                }
+
 
 /* Footer */
 
@@ -240,6 +257,14 @@ footer.page-footer {
     font-size:2em;
     text-align: center;
 }
+
+                @media screen and (max-width: 992px) {
+                    .social-network {
+                        text-align: left;
+                        margin-left:50px;
+                    }
+                }
+
 .social-network h5 {
     margin-bottom: 20px;
 }

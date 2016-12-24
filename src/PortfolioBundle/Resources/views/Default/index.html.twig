@@ -16,8 +16,7 @@
         </section>
 
 
-
-        <section class="container quijesuis">
+        <section id="whoami" class="container quijesuis">
             <h2>Qui je suis?</h2>
             <hr>
             <div class="row">
@@ -31,8 +30,7 @@
                     <br>
                     Aussi, si vous n'êtes pas allergique à la bonne humeur, vous pouvez m'adopter!
                     Je mange des confiseries, ne mords (presque) pas, et je vous ramène des gâteaux de temps en temps, si vous êtes sympas.
-                </p>
-                <p class="desc_me col l9 s12">
+                <br><br>
                     Plus sérieusement, après un parcours chaotique pour tenter de rentrer dans le moule des assistantes
                     manager et autres joyeusetés administratives, je me suis intéressée au développement Web, de manière autodidacte dans un premier temps, puis avec la Wild Code School
                     pour continuer mon apprentissage.
@@ -51,7 +49,7 @@
         </section>
 
 
-        <section class="projets">
+        <section id="projects" class="projets">
             <div class="container">
                 <h2>Mes Projets</h2>
                 <hr>
@@ -64,7 +62,7 @@
 
                     {% for projet in projets %}
 
-                    <div class="col s12 m4 proj">
+                    <div class="col s12 l4 proj">
                         <p>{{ projet.titre }}</p>
                         <a class="waves-effect waves-light open-modal" href="#modal-{{ projet.id }}"><img src="{{ upload_directory }}/{{ projet.imgpath }}"/></a>
                     </div>
@@ -89,7 +87,7 @@
                         <div class="modal-footer">
                             <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">fermer</a>
                         </div>
-<
+
                     </div>
                     {% endfor %}
                 </div>
@@ -97,7 +95,7 @@
         </section>
 
 
-        <section class="container quijesuis">
+        <section id="tools" class="container quijesuis">
             <h2>Langages et outils</h2>
             <hr>
             <div class="row">
@@ -134,7 +132,6 @@
                     </div>
 
                 </div>
-
                 
 
                 <div class="col l6 s12 outils">
@@ -158,7 +155,7 @@
 
         </section>
 
-        <section class="other">
+        <section id="other" class="other">
             <div class = container>
                 <h2>Autres réalisations</h2>
                 <hr>
@@ -172,18 +169,14 @@
                     <p>Traduction : J'adore parler des langues étrangères! Je parle assez bien anglais et italien, et j'apprends le japonais.
                         <br> C'est dans cette optique que j'ai traduit de l'anlgais vers le français un article sur la <a href="https://code.tutsplus.com/tutorials/object-oriented-php-for-beginners--net-12762">POO</a>(en cours de trad!)
                         et un <a href="https://design.tutsplus.com/fr/tutorials/creating-a-simple-kawaii-yeti-with-basic-shapes-in-adobe-illustrator--vector-10738">tutoriel sur Illustrator</a>.</p>
-                    <p>Tableaux Geeks sous Illustrator : je me suis amusée à faire quelques essais avec le logiciel...</p>
                     <p>Affiches évènementielles : Pour mes besoins personnels mais aussi dans le cadre de ma précédente association (AoA Production), j'ai utilisé Photoshop pour réaliser des affiches!</p>
                     <p>Un petit jeu codé en C spécialement créé en suivant les cours Open Classrooms. tu veux le tester? (c'est du .exe!) <a class="btn" href="{{ asset('media/other-real/plus_ou_moins_le_jeu_de_la_mort.exe') }}">cliques ici!</a></p>
-
-
 
                 </div>
             </div>
 
 
         </section>
-
 
         <section id="culture">
             <div class="container">
@@ -193,20 +186,20 @@
             <p>A mes heures perdues, j'aime particulièrement faire de la musique, dessiner, lire, regarder des séries(non, pas Game Of Throne, désolée!), et jouer aux jeux vidéos.
                 J'ai donc rassemblé ici quelques une de mes références dans chacun de ces domaines, un peu comme un CV mais uniquement basé sur ma culture et mes loisirs.</p>
             </div>
-            <table class="table table-responsive">
+
+            <table class="table">
                 {% for culture in cultures %}
                 <tr class="row">
                     <td><img src="{{ upload_directory }}/{{ culture.img }}"></td>
                     <td>{{ culture.type }}</td>
                     <td>{{ culture.title }}</td>
-                    <td>{{ culture.why }}</td>
+                    <td class="why">{{ culture.why }}</td>
                 </tr>
                     {% endfor %}
             </table>
 
 
         </section>
-
 
     </div>
 

@@ -1,24 +1,50 @@
-<header>
+{#<header>
     <div class="navbar-fixed">
     <nav>
             <div class="nav-wrapper">
-                    <a class="brand-logo" href="#">Ciloo</a>
+                    <a class="brand-logo" href="{{ path('portfolio_homepage') }}">Ciloo</a>
                 <a href="#" data-activates="nav-mobile" class="button-collapse right"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down" id="nav-mobile">
-                    <li><a href="#">Qui je suis ?</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Mes outils</a></li>
-                    <li><a href="#">Loisirs</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="{{ path('portfolio_homepage') }}#whoami">Qui je suis ?</a></li>
+                    <li><a href="{{ path('portfolio_homepage') }}#projects">Portfolio</a></li>
+                    <li><a href="{{ path('portfolio_homepage') }}#tools">Mes outils</a></li>
+                    <li><a href="{{ path('portfolio_homepage') }}#culture">Loisirs</a></li>
+                    <li><a href="{{ path('portfolio_homepage') }}#contact">Contact</a></li>
                 </ul>
                 <ul class="side-nav hide-on-large-only" id="nav-mobile">
-                    <li><a href="#">Qui je suis ?</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Mes outils</a></li>
-                    <li><a href="#">Loisirs</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="{{ path('portfolio_homepage') }}#whoami">Qui je suis ?</a></li>
+                    <li><a href="{{ path('portfolio_homepage') }}#projects">Portfolio</a></li>
+                    <li><a href="{{ path('portfolio_homepage') }}#tools">Mes outils</a></li>
+                    <li><a href="{{ path('portfolio_homepage') }}#culture">Loisirs</a></li>
+                    <li><a href="{{ path('portfolio_homepage') }}#contact">Contact</a></li>
                 </ul>
             </div>
     </nav>
 </div>
+</header>
+#}
+
+<header>
+    <nav class="nav-fixed">
+        <div class="nav-wrapper">
+            <a class="brand-logo" href="{{ path('portfolio_homepage') }}">Ciloo</a>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="{{ path('portfolio_homepage') }}#whoami">Qui je suis ?</a></li>
+                <li><a href="{{ path('portfolio_homepage') }}#projects">Portfolio</a></li>
+                <li><a href="{{ path('portfolio_homepage') }}#tools">Mes outils</a></li>
+                <li><a href="{{ path('portfolio_homepage') }}#culture">Loisirs</a></li>
+                <li><a href="{{ path('portfolio_homepage') }}#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul class="side-nav" id="nav-mobile">
+        <li><a href="{{ path('portfolio_homepage') }}#whoami">Qui je suis ?</a></li>
+        <li><a href="{{ path('portfolio_homepage') }}#projects">Portfolio</a></li>
+        <li><a href="{{ path('portfolio_homepage') }}#tools">Mes outils</a></li>
+        <li><a href="{{ path('portfolio_homepage') }}#culture">Loisirs</a></li>
+        <li><a href="{{ path('portfolio_homepage') }}#contact">Contact</a></li>
+    </ul>
+
 </header>
