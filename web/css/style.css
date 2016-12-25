@@ -144,11 +144,11 @@ h2 {
 }
 
 .proj img {
-    height:235px;
+    height:180px;
 }
 
 .blockprojet .modal-content img {
-    height: 235px;
+    height: 180px;
 }
 
 /*Langages et outils */
@@ -183,10 +183,25 @@ h2 {
     color:white;
 }
 
+                @media screen and (min-width: 993px) and (max-width: 1400px){
+
+
+                    .proj img, .blockprojet .modal-content img {
+                        height: 120px;
+                    }
+
+                    .blockprojet .modal-content img {
+                        height: 130px;
+                    }
+                    .proj p {
+                        text-align: center;
+                        font-size:1.2em; }
+
+                }
 
                 @media screen and (max-width: 992px) {
                     .langages {
-                        border-right: 0px;
+                        border-right: 0;
                     }
 
                     .proj img, .blockprojet .modal-content img {
@@ -200,6 +215,7 @@ h2 {
                         text-align: center;
                     }
                 }
+
 
 /* Autres réalisations */
 
@@ -262,6 +278,12 @@ footer.page-footer {
                     .social-network {
                         text-align: left;
                         margin-left:50px;
+                    }
+                }
+
+                @media screen and (min-width: 993px) and (max-width: 1520px) {
+                    .social-network {
+                        font-size:1.3em;
                     }
                 }
 
