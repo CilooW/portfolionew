@@ -12,7 +12,7 @@
 .accueil .quote {
     position:absolute;
     display: block;
-    top : 450px;
+    top : 50%;
     left: 50px;
     color: white;
 }
@@ -26,9 +26,29 @@
     text-align: right;
 }
 
+                @media screen and (max-width: 640px) {
+                    .accueil .quote {
+                        top:40%;
+                    }
+
+                    #citation {
+                        font-size: 2em;
+
+                    }
+
+                    #auteur {
+                        font-size: 1.3em;
+                    }
+                }
+
 h2 {
     text-align: center;
 }
+                @media screen and (max-width: 640px) {
+                    h2 {
+                        font-size: 2em;
+                    }
+                }
 
 .brand-logo{
     margin-left: 20px;
@@ -42,17 +62,33 @@ h2 {
     background-color: #1c2529;
 }
 
+.nav-fixed {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin-bottom: 0;
+    z-index: 997;
+}
 
 /* section QUI JE SUIS */
 
 .quijesuis {
     width: 70%;
+
     margin:0 auto;
 }
 
 .quijesuis img {
     width:80%;
+    height:80%;
 }
+
+                @media screen and (max-width: 992px) {
+                    .centerimg {
+                        text-align: center;
+                    }
+                }
 
 .desc_me {
     font-size: 1.3em;
@@ -70,14 +106,16 @@ h2 {
     margin-bottom: 20px;
 }
 
-.keyword {
-
-    border-radius: 2%;
-}
-
 .hashtag {
     font-weight: bold;
 }
+
+                @media screen and (max-width: 640px) {
+                    .keyword {
+                        margin-top:0px;
+                        margin-bottom:0px;
+                    }
+                }
 
 /* Mes Projets */
 
@@ -102,14 +140,15 @@ h2 {
 .blockprojet {
     margin-top: 20px;
     padding-bottom: 20px;
+    text-align: center;
 }
 
 .proj img {
-    height:235px;
+    height:180px;
 }
 
 .blockprojet .modal-content img {
-    height: 235px;
+    height: 180px;
 }
 
 /*Langages et outils */
@@ -126,7 +165,7 @@ h2 {
 }
 
 .langages img {
-    height: 108px;
+    height: 80%
 }
 
 .modal-content img {
@@ -143,6 +182,40 @@ h2 {
     font-size:1.8em;
     color:white;
 }
+
+                @media screen and (min-width: 993px) and (max-width: 1400px){
+
+
+                    .proj img, .blockprojet .modal-content img {
+                        height: 120px;
+                    }
+
+                    .blockprojet .modal-content img {
+                        height: 130px;
+                    }
+                    .proj p {
+                        text-align: center;
+                        font-size:1.2em; }
+
+                }
+
+                @media screen and (max-width: 992px) {
+                    .langages {
+                        border-right: 0;
+                    }
+
+                    .proj img, .blockprojet .modal-content img {
+                        height: 180px;
+                    }
+
+                    .blockprojet .modal-content img {
+                        height: 150px;
+                    }
+                    .blockprojet {
+                        text-align: center;
+                    }
+                }
+
 
 /* Autres réalisations */
 
@@ -185,6 +258,10 @@ h2 {
     font-size: 1.3em;
 }
 
+                @media screen and (max-width: 640px) {
+                    .why {display:none}
+                }
+
 
 /* Footer */
 
@@ -196,6 +273,20 @@ footer.page-footer {
     font-size:2em;
     text-align: center;
 }
+
+                @media screen and (max-width: 992px) {
+                    .social-network {
+                        text-align: left;
+                        margin-left:50px;
+                    }
+                }
+
+                @media screen and (min-width: 993px) and (max-width: 1520px) {
+                    .social-network {
+                        font-size:1.3em;
+                    }
+                }
+
 .social-network h5 {
     margin-bottom: 20px;
 }
@@ -205,4 +296,18 @@ footer.page-footer {
 
 .social-network a {
     margin-left: 20px;
+}
+
+/* Pages d'erreur */
+
+#err404 {
+    background-image: url(../media/trex400.jpg);
+}
+
+#err404 p {
+    margin : 100px;
+    padding: 10px;
+    width:400px;
+    background-color: rgba(255,255,255,0.6);
+    border-radius:25px;
 }

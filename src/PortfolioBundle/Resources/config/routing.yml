@@ -1,18 +1,18 @@
-portfolio_projet:
-    resource: "@PortfolioBundle/Resources/config/routing/projet.yml"
-    prefix:   /projet
+# portfolio_projet:
+#    resource: "@PortfolioBundle/Resources/config/routing/projet.yml"
+#    prefix:   /projet
 
-portfolio_citation:
-        resource: "@PortfolioBundle/Resources/config/routing/citation.yml"
-        prefix:   /citation
+# portfolio_citation:
+#        resource: "@PortfolioBundle/Resources/config/routing/citation.yml"
+#        prefix:   /citation
 
-portfolio_tag:
-        resource: "@PortfolioBundle/Resources/config/routing/tag.yml"
-        prefix:   /tag
+# portfolio_tag:
+#        resource: "@PortfolioBundle/Resources/config/routing/tag.yml"
+#        prefix:   /tag
 
-portfolio_culture:
-        resource: "@PortfolioBundle/Resources/config/routing/culture.yml"
-        prefix:   /culture
+# portfolio_culture:
+#        resource: "@PortfolioBundle/Resources/config/routing/culture.yml"
+#        prefix:   /culture
 
 portfolio_homepage:
     path:     /
