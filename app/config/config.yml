@@ -96,9 +96,3 @@ easy_admin:
             form:  # <-- 'form' is applied to both 'new' and 'edit' views
                             fields:
                                 - 'tech'
-vich_uploader:
-    db_driver: orm
-    mappings:
-        images:
-            uri_prefix:         %upload_directory%
-            upload_destination: %kernel.root_dir%/../web/uploads/
